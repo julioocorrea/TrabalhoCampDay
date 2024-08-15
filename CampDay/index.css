@@ -1,0 +1,78 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Remove a barra de rolagem */
+}
+
+body {
+    background-image: url('./background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.container-principal {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px; /* Ajusta para descer a div principal */
+}
+
+.div-01 {
+    width: 60%;
+}
+
+.div-02 {
+    width: 35%;
+    background-color: #651acf;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border-radius: 8px;
+}
+
+.colocado {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.numero {
+    width: 70px;
+    height: 50px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin-right: 20px;
+}
+
+.escolastop5 {
+    background-color: #ffffff;
+    width: 550px;
+    height: 60px;
+    border-radius: 8px;
+    display: flex;
+}
+
+.nome-escola{
+    font-size: 30px;
+}
+
+.pontuacao{
+    margin-left: 70%;
+    font-size: 30px;
+}
