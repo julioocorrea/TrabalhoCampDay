@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/home.css">
+    <title><%= title %></title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0; /* Remove a margem padrão */
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px; /* Largura máxima para o formulário */
+            text-align: center; /* Centraliza o conteúdo */
+        }
+        h2 {
+            margin-bottom: 20px; /* Espaçamento abaixo do título */
+            color: #651acf;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            text-align: left; /* Alinhamento à esquerda */
+        }
+        input[type="text"], input[type="number"] {
+            width: calc(100% - 20px); /* Subtrai o padding */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus, input[type="number"]:focus {
+            border-color: #651acf; /* Muda a cor da borda ao focar */
+            outline: none; /* Remove a borda de foco padrão */
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #651acf;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px; /* Espaçamento acima do botão */
+        }
+        button:hover {
+            background-color: #5a0fb3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Adicionar Pontos</h2>
+        <form action="/adicionar-pontos" method="POST">
+            <label for="nome">Nome da Escola:</label>
+            <input type="text" name="nome" id="nome" required>
+            <label for="pontos">Pontos:</label>
+            <input type="number" name="pontos" id="pontos" required min="0" max="100">
+            <button type="submit">Adicionar Pontos</button>
+        </form>
+    </div>
+</body>
+</html>
